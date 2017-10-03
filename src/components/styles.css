@@ -1,0 +1,55 @@
+.main {
+  margin: 3em auto 0;
+}
+
+.alert {
+  margin-bottom: 20px;
+}
+
+.create {
+  margin-bottom: 1.5em;
+}
+
+.reload {
+  float: right;
+}
+
+.operation a {
+  margin: 0 .5em;
+}
+
+@media (max-width: 768px) {
+  .main {
+    width: 95%;
+  }
+  .modalWarp {
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1366px) {
+  .main {
+    width: 90%;
+  }
+  .modalWarp {
+    padding: 0 5%;
+  }
+}
+
+@media (min-width: 1366px) and (max-width: 1920px) {
+  .main {
+    width: 80%;
+  }
+  .modalWarp {
+    padding: 0 10%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .main {
+    width: 1536px;
+  }
+  .modalWarp {
+    padding: 0 calc((100% - 1536px)/2);
+  }
+}

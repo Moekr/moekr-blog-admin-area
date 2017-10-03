@@ -1,0 +1,9 @@
+.header {
+  background: #404040;
+  display: flex;
+}
+
+.header-menu {
+  display: inline;
+  margin: 0 auto;
+}
