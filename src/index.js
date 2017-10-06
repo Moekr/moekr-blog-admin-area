@@ -11,6 +11,7 @@ app.model(require('./models/login'));
 app.model(require('./models/articles'));
 app.model(require('./models/categories'));
 app.model(require('./models/tags'));
+app.model(require('./models/properties'));
 
 app.router(require('./router'));
 
