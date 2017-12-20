@@ -1,7 +1,7 @@
 import { Component } from 'react';
 
 class FormModal extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       visible: false,

@@ -1,7 +1,7 @@
-import * as categoriesService from '../services/categories';
+import * as redirectionsService from '../services/redirections';
 
 export default {
-  namespace: 'categories',
+  namespace: 'redirections',
   state: {
     list: [],
   },
@@ -16,20 +16,20 @@ export default {
     },
   },
   effects: {
-    *fetch({ payload }, { call, put }) {
-      const data = yield call(categoriesService.fetch);
-      if (data.error === 0) {
-        yield put({ type: 'save', payload: { data } });
-      }
-    },
-    *update({ payload: category }, { call, put }) {
-      const data = yield call(categoriesService.update, category.id, category);
+    *createOrUpdate({ payload: article }, { call, put }) {
+      const data = yield call(redirectionsService.createOrUpdate, article);
       if (data.error === 0) {
         yield put({ type: 'fetch' });
       }
     },
+    *fetch({ payload }, { call, put }) {
+      const data = yield call(redirectionsService.fetch);
+      if (data.error === 0) {
+        yield put({ type: 'save', payload: { data } });
+      }
+    },
     *remove({ payload: id }, { call, put }) {
-      const data = yield call(categoriesService.remove, id);
+      const data = yield call(redirectionsService.remove, id);
       if (data.error === 0) {
         yield put({ type: 'fetch' });
       }

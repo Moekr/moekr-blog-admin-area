@@ -12,6 +12,7 @@ app.model(require('./models/articles'));
 app.model(require('./models/categories'));
 app.model(require('./models/tags'));
 app.model(require('./models/properties'));
+app.model(require('./models/redirections'));
 
 app.router(require('./router'));
 

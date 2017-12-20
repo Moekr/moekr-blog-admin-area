@@ -55,12 +55,14 @@ export default {
       yield put({ type: 'categories/fetch' });
       yield put({ type: 'tags/fetch' });
       yield put({ type: 'properties/fetch' });
+      yield put({ type: 'redirections/fetch' });
     },
     *clearData({ payload }, { put }) {
       yield put({ type: 'articles/clear' });
       yield put({ type: 'categories/clear' });
       yield put({ type: 'tags/clear' });
       yield put({ type: 'properties/clear' });
+      yield put({ type: 'redirections/clear' });
     },
   },
   subscriptions: {

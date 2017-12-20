@@ -23,6 +23,9 @@ function Header({ location }) {
         <Menu.Item key={`${Const.path}/properties`}>
           <Link to={`${Const.path}/properties`}><Icon type="setting" />设置</Link>
         </Menu.Item>
+        <Menu.Item key={`${Const.path}/redirections`}>
+          <Link to={`${Const.path}/redirections`}><Icon type="reload" />短网址</Link>
+        </Menu.Item>
       </Menu>
     </div>
   );

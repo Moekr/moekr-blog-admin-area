@@ -12,7 +12,7 @@ export default {
     },
     clear(state) {
       const list = [];
-      return { ...state, list};
+      return { ...state, list };
     },
   },
   effects: {

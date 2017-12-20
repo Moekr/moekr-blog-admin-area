@@ -23,7 +23,8 @@
     "react/prefer-stateless-function": [0],
     "react/prop-types": [0],
     "require-yield": [1],
-    "max-len":"off"
+    "max-len":"off",
+    "linebreak-style": "off"
   },
   "parserOptions": {
     "ecmaFeatures": {

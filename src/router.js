@@ -8,6 +8,7 @@ import ArticleComponent from './components/Articles';
 import CategoryComponent from './components/Categories';
 import TagComponent from './components/Tags';
 import PropertyComponent from './components/Properties';
+import RedirectionComponent from './components/Redirections';
 
 function RouterConfig({ history }) {
   return (
@@ -18,6 +19,7 @@ function RouterConfig({ history }) {
         <Route path="categories" component={CategoryComponent} />
         <Route path="tags" component={TagComponent} />
         <Route path="properties" component={PropertyComponent} />
+        <Route path="redirections" component={RedirectionComponent} />
       </Route>
     </Router>
   );
