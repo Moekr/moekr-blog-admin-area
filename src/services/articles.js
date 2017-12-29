@@ -20,6 +20,8 @@ export function update(id, article) {
       title: article.title,
       summary: article.summary,
       content: article.content,
+      alias: article.alias,
+      visible: article.visible,
       category: article.category,
       tags: article.tags,
     }),

@@ -43,6 +43,16 @@ function Articles({ dispatch, categories: dataSource, hasLogin }) {
       dataIndex: 'name',
     },
     {
+      title: '级别',
+      dataIndex: 'level',
+    },
+    {
+      title: '可见',
+      dataIndex: 'visible',
+      render: visible =>
+        <span>{visible ? '是' : '否'}</span>,
+    },
+    {
       title: '操作',
       key: 'operation',
       render: (text, record) => (
@@ -62,7 +72,7 @@ function Articles({ dispatch, categories: dataSource, hasLogin }) {
     <div className={styles.main}>
       {alertHandler(!hasLogin)}
       <div className={styles.create}>
-        <CategoryFormModal record={{}} onOk={editHandler}>
+        <CategoryFormModal record={{ level: 50, visible: true }} onOk={editHandler}>
           <Button type="primary" disabled={!hasLogin}>新分类</Button>
         </CategoryFormModal>
         <Button type="primary" onClick={reloadHandler} className={styles.reload} disabled={!hasLogin}>重新载入</Button>

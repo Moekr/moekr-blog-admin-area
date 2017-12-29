@@ -11,6 +11,8 @@ export function update(id, category) {
     method: 'PUT',
     body: JSON.stringify({
       name: category.name,
+      level: category.level,
+      visible: category.visible,
     }),
   });
 }

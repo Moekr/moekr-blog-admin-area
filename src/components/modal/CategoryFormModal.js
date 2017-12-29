@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, Form, Input } from 'antd';
+import { Modal, Form, Input, Slider, Switch } from 'antd';
 import FormModal from './FormModal';
 import styles from '../styles.css';
 
@@ -9,7 +9,7 @@ class CategoryFormModal extends FormModal {
   render() {
     const { children } = this.props;
     const { getFieldDecorator } = this.props.form;
-    const { id, name } = this.props.record;
+    const { id, name, level, visible } = this.props.record;
     const formItemLayout = {
       labelCol: { span: 3 },
       wrapperCol: { span: 18 },
@@ -40,6 +40,21 @@ class CategoryFormModal extends FormModal {
                     message: '请填写名称！',
                   }],
                 })(<Input />)
+              }
+            </FormItem>
+            <FormItem {...formItemLayout} label="级别">
+              {
+                getFieldDecorator('level', {
+                  initialValue: level,
+                })(<Slider />)
+              }
+            </FormItem>
+            <FormItem {...formItemLayout} label="可见">
+              {
+                getFieldDecorator('visible', {
+                  valuePropName: 'checked',
+                  initialValue: visible,
+                })(<Switch />)
               }
             </FormItem>
           </Form>

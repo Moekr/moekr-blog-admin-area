@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, Form, Input, Select } from 'antd';
+import { Modal, Form, Input, Select, Switch } from 'antd';
 import FormModal from './FormModal';
 import styles from '../styles.css';
 
@@ -9,7 +9,7 @@ class ArticleFormModal extends FormModal {
   render() {
     const { children } = this.props;
     const { getFieldDecorator } = this.props.form;
-    const { title, summary, content, category, tags } = this.props.record;
+    const { title, summary, content, alias, visible, category, tags } = this.props.record;
     const formItemLayout = {
       labelCol: { span: 3 },
       wrapperCol: { span: 18 },
@@ -63,6 +63,21 @@ class ArticleFormModal extends FormModal {
                     message: '请填写正文！',
                   }],
                 })(<Input.TextArea autosize />)
+              }
+            </FormItem>
+            <FormItem {...formItemLayout} label="别名">
+              {
+                getFieldDecorator('alias', {
+                  initialValue: alias,
+                })(<Input />)
+              }
+            </FormItem>
+            <FormItem {...formItemLayout} label="可见">
+              {
+                getFieldDecorator('visible', {
+                  valuePropName: 'checked',
+                  initialValue: visible,
+                })(<Switch />)
               }
             </FormItem>
             <FormItem {...formItemLayout} label="分类">

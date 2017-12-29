@@ -90,7 +90,7 @@ function Articles({ dispatch, articles: dataSource, categories, tags, hasLogin }
     <div className={styles.main}>
       {alertHandler(!hasLogin)}
       <div className={styles.create}>
-        <ArticleFormModal record={{}} categories={categories} tags={tags} onOk={createHandler}>
+        <ArticleFormModal record={{ visible: true }} categories={categories} tags={tags} onOk={createHandler}>
           <Button type="primary" disabled={!hasLogin}>新文章</Button>
         </ArticleFormModal>
         <Button type="primary" onClick={reloadHandler} className={styles.reload} disabled={!hasLogin}>重新载入</Button>
