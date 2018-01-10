@@ -68,7 +68,7 @@ class ArticleFormModal extends FormModal {
             <FormItem {...formItemLayout} label="别名">
               {
                 getFieldDecorator('alias', {
-                  initialValue: alias,
+                  initialValue: typeof alias === 'undefined' ? '' : alias,
                 })(<Input />)
               }
             </FormItem>
